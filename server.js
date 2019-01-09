@@ -7,7 +7,7 @@ var app = express();
 app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({
-    extended: false
+    extended: true
 }))
 
 app.use(methodOverride('_method'));
@@ -16,8 +16,8 @@ app.engine('handlebars',exphbs({
 }));
 app.set('view engine','handlebars');
 
-var routes = require('./controllers/routes.js');
-app.use('/',routes);
+var routes = require('./controllers/burgers_controller.js');
+app.use(routes);
 
 var port = 3000;
 app.listen(port);

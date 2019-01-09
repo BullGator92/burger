@@ -1,5 +1,7 @@
+USE burger_db;
+
 INSERT INTO burgers(burger_name, devoured)
-VALUES ("Burger1", TRUE);
+VALUES ("Bur_dbger1", TRUE);
 
 INSERT INTO burgers(burger_name, devoured)
 VALUES ("Burger2", FALSE);
